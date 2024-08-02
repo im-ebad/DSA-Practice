@@ -1,0 +1,6 @@
+print upto nth term.
+print n terms reverse.
+print sum upto nth term.
+reverse an array.
+check palindrome string.
+fcatorial.
