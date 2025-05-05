@@ -2,10 +2,11 @@
 using namespace std;
 void subseq(int i, int n, vector<int> &temp, vector<int> arr) {
   if (i >= n) {
-    for (int x : temp) {
-      cout << x << " ";
+    int result = temp[0];
+    for (int x = 1; x < temp.size(); x++) {
+      result = gcd(result, temp[x]);
     }
-    cout << endl;
+    cout << result << endl;
     return;
   }
   subseq(i + 1, n, temp, arr);
@@ -14,8 +15,8 @@ void subseq(int i, int n, vector<int> &temp, vector<int> arr) {
   temp.pop_back();
 }
 int main() {
-  vector<int> arr{1, 2, 3};
+  vector<int> arr{1, 20, 51, 9};
   vector<int> temp;
-  subseq(0, 3, temp, arr);
+  subseq(0, 4, temp, arr);
   return 0;
 }
