@@ -3,9 +3,9 @@
 using namespace std;
 
 string convert2Binary(int num) {
-
+  if (num == 0)
+    return '0';
   string x;
-
   while (num > 0) {
     if (num % 2 == 1)
       x += "1";
@@ -13,13 +13,11 @@ string convert2Binary(int num) {
       x += "0";
     num /= 2;
   }
-
   reverse(x.begin(), x.end());
   return x;
 }
 
 int main() {
-
   int num;
   cout << "Enter the Decimal Number:" << endl;
   cin >> num;
